@@ -1,4 +1,4 @@
-# BanderoGus 🎮
+# BanderoGoose 🎮
 
 BanderoGus is an interactive browser project built with vanilla JavaScript, HTML, and CSS.  
 The project demonstrates DOM manipulation, event-driven interactions, and simple UI animation logic.
