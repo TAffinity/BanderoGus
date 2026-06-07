@@ -39,6 +39,14 @@ addGooseElement();
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  const name = document.querySelector("#user-name").value;
+  const email = document.querySelector("#user-email").value;
+
+  if (!name || !email) {
+    alert("Пожалуйста, заполни все поля");
+    return;
+  }
+
   showGooseAnim();
   clearFormFields();
 
