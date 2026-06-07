@@ -38,25 +38,15 @@ addGooseElement();
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const formData = new FormData(form);
+
+  showGooseAnim();
+  clearFormFields();
 
   launchBtn.setAttribute("disabled", true);
   launchBtn.style.opacity = "0.7";
 
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
-  })
-    .then(() => {
-      showGooseAnim();
-
-      launchBtn.removeAttribute("disabled");
-      clearFormFields();
-
-      setTimeout(() => {
-        launchBtn.style.opacity = "1";
-      }, 4000);
-    })
-    .catch((error) => console.log("Sending form failed"));
+  setTimeout(() => {
+    launchBtn.removeAttribute("disabled");
+    launchBtn.style.opacity = "1";
+  }, 4000);
 });
