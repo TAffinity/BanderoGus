@@ -43,7 +43,7 @@ form.addEventListener("submit", (e) => {
   const email = document.querySelector("#user-email").value;
 
   if (!name || !email) {
-    alert("Пожалуйста, заполни все поля");
+    alert("Будь ласка, заповни всі поля");
     return;
   }
 
